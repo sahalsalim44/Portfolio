@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahal Salim | Full-Stack Developer</title>
+    <meta name="description" content="Sahal Salim is a Full-Stack Developer with expertise in Java, Spring, Hibernate, React, and more. View portfolio, projects, and contact information.">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://signature.freefire-name.com/img.php?f=2&t=Sahal" alt="">
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>    
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Hi, I'm <span class="gradient-text">Sahal Salim</span></h1>
+                        <h2>Full-Stack Developer</h2>
+                        <p> Passionate Full Stack Developer with a relentless drive to build, break, and better the digital world. Backed by a solid foundation in Computer Science, I specialize in crafting impactful, scalable, and elegant software solutions using Java, Spring Boot, Hibernate, React.js, and a modern tech stack.
+
+                            I don’t just code — I live to create. Every line I write is driven by purpose: to solve real problems, deliver exceptional user experiences, and push boundaries. Whether it’s architecting powerful backends, designing smooth frontends, or optimizing for performance, I bring energy, curiosity, and craftsmanship to every project.
+                            
+                            I’m not looking for just a job — I’m here to build products that matter, grow with passionate teams, and leave a mark on every line of code I touch. Let’s build the future — one feature at a time.</p>
+                        <div class="hero-btns">
+                            <a href="#contact" class="btn primary-btn">Contact Me <i class="fas fa-arrow-right"></i></a>
+                            <a href="#projects" class="btn secondary-btn">View Projects <i class="fas fa-folder"></i></a>
+                            <a href="/documents/sahalsalimResume.pdf"  class="btn secondary-btn">Download Resume<i class="fas fa-folder"></i></a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sahal-salim38a0b32b9" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/sahalsalim44" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="mailto:sahalsalim04@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="img-container">
+
+                            <div class="photo-placeholder">
+                                <!-- <i class="fas fa-user"></i>
+                                <p>Your Photo Here</p> -->
+                            </div>
+                        </div>
+                        <!-- Status Indicator -->
+                        <div class="status-card">
+                            <div class="status-dot"></div>
+                            <span>Available for work</span>
+                        </div>
+                        <!-- Skill Badge -->
+                        <div class="skill-badge">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-text">
+                                <span>Java / React</span>
+                                <small>Full Stack</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">My Projects</span></h2>
+                    <p>Here are some of the projects I've worked on. Each project reflects my skills and expertise in different technologies.</p>
+                </div>
+                <div class="filter-btns">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1557853197-aefb550b6fdc?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="E-commerce project">
+                            <div class="project-overlay">
+                                <h3>Full Stack E-commerce Website</h3>
+                                <span class="project-date">Jan 2025</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <span class="badge web">Web</span>
+                            </div>
+                            <p>A complete online shopping platform with user authentication, product management, and order processing.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">RESTful API</span>
+                                <span class="tech-tag">MUI</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                                <span>70%</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="project-details.html?id=ecommerce" class="btn sm-btn">View Details</a>
+                                <a href="https://github.com" target="_blank" class="btn icon-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-img">
+                            <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="E-voting system">
+                            <div class="project-overlay">
+                                <h3>E-Voting System</h3>
+                                <span class="project-date">Nov 2023</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <span class="badge mobile">Mobile</span>
+                            </div>
+                            <p>A secure electronic voting system with face recognition authentication and real-time result tracking.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Face Recognition</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="project-details.html?id=evoting" class="btn sm-btn">View Details</a>
+                                <a href="https://demo-site.com" target="_blank" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com" target="_blank" class="btn icon-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="./images/zomato.png" alt="Zomato">
+                            <div class="project-overlay">
+                                <h3>Zomato Clone</h3>
+                                <span class="project-date">Nov 2024</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <span class="badge mobile">Web</span>
+                            </div>
+                            <p>Cloned the ui of Zomato's website using HTML and CSS.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Visual Studio</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span>100%</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="project-details.html?id=zomatoclone" class="btn sm-btn">View Details</a>
+                                <a href="https://demo-site.com" target="_blank" class="btn icon-btn"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com" target="_blank" class="btn icon-btn"></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="backend">
+                        <div class="project-img">
+                            <img src="data:image/jpeg;base64,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" alt="Blood bank system">
+                            <div class="project-overlay">
+                                <h3>Blood Bank Management System</h3>
+                                <span class="project-date">Jul 2023</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <span class="badge backend">Backend</span>
+                            </div>
+                            <p>A comprehensive system for managing blood donations, inventory, and recipient requests.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Database Management</span>
+                                <span class="tech-tag">Data Validation</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                                <span>90%</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="project-details.html?id=bloodbank" class="btn sm-btn">View Details</a>
+                                <a href="https://github.com" target="_blank" class="btn icon-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">My Skills</span></h2>
+                    <p>I've developed a diverse set of skills throughout my education and experience. Here's an overview of my technical expertise.</p>
+                </div>
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skills-card">
+                        <div class="skills-header">
+                            <div class="skills-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-content">
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>Java</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill blue" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill yellow" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill green" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>HTML & CSS</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill red" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>SQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill purple" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Frameworks & Libraries -->
+                    <div class="skills-card">
+                        <div class="skills-header">
+                            <div class="skills-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3>Frameworks & Libraries</h3>
+                        </div>
+                        <div class="skills-content">
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>Spring</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill green" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>Hibernate</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill yellow" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>React</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill blue" style="width: 82%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>Bootstrap</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill purple" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <span>RESTful APIs</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill indigo" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Software & Tools -->
+                <div class="tools-container">
+                    <div class="tools-header">
+                        <div class="tools-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Software & Tools</h3>
+                    </div>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fas fa-archive"></i>
+                            </div>
+                            <span>Maven</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="far fa-circle"></i>
+                            </div>
+                            <span>Eclipse</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span>Git</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span>AI Tools</span>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">Work Experience</span></h2>
+                    <p>My professional journey and internship experience that have shaped my skills and expertise.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Intern</h3>
+                            <div class="timeline-info">
+                                <span>JSpiders</span>
+                                <span>Kochi</span>
+                            </div>
+                            <div class="timeline-date">2024/2025</div>
+                            <ul class="timeline-details">
+                                <li>Acquired in-depth knowledge of Core Java, Advanced Java (J2EE), and frameworks such as Spring and Hibernate through hands-on training.</li>
+                                <li>Gained practical experience in front-end technologies including HTML, CSS, JavaScript, and React.js, focusing on building responsive and interactive user interfaces.</li>
+                                <li>Worked on real-time projects simulating industry scenarios, strengthening skills in full-stack development and software engineering practices.</li>
+                                <li>Enhanced problem-solving and debugging capabilities through structured training in data structures, algorithms, and SQL.</li>
+                                <li>Collaborated effectively in team-based environments, applying Agile methodologies and using version control tools like Git for source code management.</li>
+                                <li>Developed comprehensive documentation for project modules, including flow diagrams, architecture designs, and user manuals.</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="timeline-content">
+                            <h3>Internship</h3>
+                            <div class="timeline-info">
+                                <span>Keltron Knowledge Centre</span>
+                                <span>Aluva</span>
+                            </div>
+                            <div class="timeline-date">May 2023</div>
+                            <ul class="timeline-details">
+                                <li>Gained hands-on experience with network protocols, configurations, and security practices.</li>
+                                <li>Developed proficiency in network protocols (TCP/IP, DNS, DHCP, VPN) and hands-on skills in setting up and monitoring LAN, WAN, and Wi-Fi networks.</li>
+                                <li>Created and maintained network documentation, including topologies, configurations, and troubleshooting guidelines.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="available-card">
+                    <div class="available-header">
+                        <div class="available-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Available for Opportunities</h3>
+                    </div>
+                    <p>I'm eager to join a dynamic organization to contribute technical expertise, embrace new challenges, and grow alongside a forward-thinking team while delivering meaningful results.</p>
+                    <div class="available-tags">
+                        <span class="tag green">Available for full-time roles</span>
+                        <span class="tag blue">Remote opportunities</span>
+                        <span class="tag amber">Willing to relocate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">Education</span></h2>
+                    <p>My academic background and professional certifications that have built my knowledge foundation.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>B.Tech in Computer Science and Engineering</h3>
+                            <div class="timeline-info">
+                                <span>MES INSTITUTE OF TECHNOLOGY AND MANAGEMENT, CHATHANOOR, KOLLAM</span>
+                            </div>
+                            <div class="timeline-date">2020 – 2024</div>
+                            <ul class="timeline-details">
+                                <li>CGPA: 6.5</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Higher Secondary Education</h3>
+                            <div class="timeline-info">
+                                <span>NATIONAL PUBLIC SCHOOL</span>
+                            </div>
+                            <div class="timeline-date">2018 – 2020</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Certified Specialist in Full Stack Development</h3>
+                            <div class="timeline-info">
+                                <span>J SPIDERS, KOCHI</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li>This course offers hands-on experience in Java Full Stack Development, focusing on building scalable, efficient applications using modern frameworks and technologies.</li>
+                                <li>Key areas include back-end development with Hibernate and Spring, front-end design with React, database integration, API development, and deployment.</li>
+                                <li>Emphasis is placed on real-world projects to enhance problem-solving skills and prepare for dynamic industry challenges.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-cards">
+                    <div class="certifications-card">
+                        <div class="cert-header">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3>Certifications</h3>
+                        </div>
+                        <div class="cert-grid">
+                            <div class="cert-item">
+                                <div class="cert-badge">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <span>Certificate in Java Full Stack Development</span>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-badge">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <span>Certificate in Communication Skill</span>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-badge">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <span>Certificate in Data analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="languages-card">
+                        <div class="lang-header">
+                            <div class="lang-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="lang-grid">
+                            <div class="lang-item">
+                                <div class="lang-badge">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="lang-info">
+                                    <span>English</span>
+                                    <small>Professional proficiency</small>
+                                </div>
+                            </div>
+                            <div class="lang-item">
+                                <div class="lang-badge">
+                                    <i class="fas fa-globe-asia"></i>
+                                </div>
+                                <div class="lang-info">
+                                    <span>Malayalam</span>
+                                    <small>Native</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><span class="gradient-text">Contact Me</span></h2>
+                    <p>Have a project in mind or want to discuss a potential opportunity? Feel free to reach out!</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h3>Get in Touch</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn btn-full">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <h3>Contact Information</h3>
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:sahalsalim04@gmail.com">sahalsalim04@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+918111812051">+91 8111812051</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Location</h4>
+                                    <p>Kerala, India</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/sahal-salim38a0b32b9" target="_blank" rel="noopener noreferrer">linkedin.com/in/sahal-salim38a0b32b9</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-connect">
+                            <h4>Let's Connect</h4>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/sahal-salim38a0b32b9" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                                <a href="mailto:sahalsalim04@gmail.com"><i class="fas fa-envelope"></i></a>
+                                <a href="tel:+918111812051"><i class="fas fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Sahal Salim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <div class="toast-message">
+                <span class="toast-title">Success!</span>
+                <span class="toast-text">Your message has been sent successfully.</span>
+            </div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+  
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

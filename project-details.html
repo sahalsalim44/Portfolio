@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Sahal Salim Portfolio</title>
+    <meta name="description" content="Detailed information about Sahal Salim's projects including features, technologies used, and progress.">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Additional styles for project detail page */
+        .project-detail-header {
+            height: 400px;
+            background: var(--primary-gradient);
+            position: relative;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+        }
+        
+        .project-detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            mix-blend-mode: overlay;
+        }
+        
+        .project-header-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+        }
+        
+        .project-header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .project-section {
+            margin-bottom: 3rem;
+        }
+        
+        .project-section h2 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .project-section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 4px;
+            background: var(--primary-gradient);
+            border-radius: var(--border-radius-full);
+        }
+        
+        .feature-list {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .feature-item {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-icon {
+            color: var(--primary-color);
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+        }
+        
+        .related-projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .related-projects {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://signature.freefire-name.com/img.php?f=2&t=Sahal" alt="">
+                </div>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#projects" class="active">Projects</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#education">Education</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#projects" class="active">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container" style="padding-top: 2rem;">
+            <a href="index.html#projects" class="btn secondary-btn" style="margin-bottom: 1.5rem;">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div id="projectDetail">
+                <!-- Project detail content will be loaded here -->
+                <div class="project-loading">
+                    <div style="text-align: center; padding: 3rem 0;">
+                        <i class="fas fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <p style="margin-top: 1rem;">Loading project details...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Sahal Salim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get project ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            // Project data
+            const projects = {
+                ecommerce: {
+                    id: "ecommerce",
+                    title: "Full Stack E-commerce Website",
+                    description: "A complete online shopping platform with user authentication, product management, and order processing.",
+                    detailDescription: "Developed a comprehensive e-commerce platform with a React frontend and Spring Boot backend. The application features secure user authentication, product browsing with filtering options, shopping cart functionality, and a streamlined checkout process with Razorpay integration.",
+                    image: "https://images.unsplash.com/photo-1557853197-aefb550b6fdc?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
+                    category: "Web",
+                    technologies: ["Spring Boot", "React", "MySQL", "RESTful API", "Tailwind CSS", "MUI"],
+                    progress: 70,
+                    date: "Jan 2025",
+                    githubUrl: "",
+                    features: [
+                        "Developed a RESTful API with Spring Boot, implementing user authentication, product management, and order processing with MySQL integration",
+                        "Built a dynamic frontend with React, featuring product catalogs, search, shopping cart, and secure checkout",
+                        "Styled the UI using MUI and Tailwind CSS for a modern, responsive design",
+                        "Configured CORS, managed data exchange between frontend and backend, and integrated Razorpay for seamless payment processing"
+                    ]
+                },
+                evoting: {
+                    id: "evoting",
+                    title: "E-Voting System",
+                    description: "A secure electronic voting system with face recognition authentication and real-time result tracking.",
+                    detailDescription: "Developed an e-Voting system that allows voters to vote remotely via an app, with user registration requiring voter ID and live face registration for authentication. The system ensures enhanced security through face verification and OTP-based authentication.",
+                    image: "./images/votingcover.jpg",
+                    category: "Mobile",
+                    technologies: ["Android Studio", "Python", "Django", "Face Recognition", "OTP Authentication"],
+                    progress: 100,
+                    date: "Nov 2023",
+                    demoUrl: "https://demo-site.com",
+                    githubUrl: "",
+                    features: [
+                        "Mobile app developed in Android Studio for seamless voting and real-time notifications",
+                        "Admin website built using Python and Django for election data management and voter verification",
+                        "Enhanced security through facial recognition and OTP verification",
+                        "Real-time results and analytics dashboard",
+                        "Secure database for storing voter information and ballot data"
+                    ]
+                },
+                bloodbank: {
+                    id: "bloodbank",
+                    title: "Blood Bank Management System",
+                    description: "A comprehensive system for managing blood donations, inventory, and recipient requests.",
+                    detailDescription: "Developed a Blood Bank Management System using Python for backend logic, SQL for database management, and front-end technologies for the user interface. The system enables efficient management of blood donations, inventory tracking, and request processing.",
+                    image: "data:image/jpeg;base64,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",
+                    category: "Backend",
+                    technologies: ["Python", "SQL", "Database Management", "Data Validation"],
+                    progress: 100,
+                    date: "Jul 2023",
+                    githubUrl: "",
+                    features: [
+                        "Managed donor and recipient information, tracked blood stock levels, and processed blood donation and request operations",
+                        "Implemented data validation and reporting features to enhance operational efficiency",
+                        "Enabled hospital staff to easily monitor and manage blood donations, ensuring timely and accurate blood supply",
+                        "Created intuitive dashboards for blood inventory status",
+                        "Generated comprehensive reports for donation history and blood usage"
+                    ]
+                },
+                zomatoclone: {
+                    id: "zomatoclone",
+                    title: "Cloned zomato UI",
+                    description: "Used HTML,CSS for cloning zomato exact ui.",
+                    // detailDescription: "Developed a Blood Bank Management System using Python for backend logic, SQL for database management, and front-end technologies for the user interface. The system enables efficient management of blood donations, inventory tracking, and request processing.",
+                    image: "./images/zomato.png",
+                    category: "Backend",
+                    technologies: ["HTML", "CSS"],
+                    progress: 100,
+                    date: "nov 2024",
+                    githubUrl: "",
+                    features: [
+                    ]
+                }
+
+            };
+            
+            // Get the specific project
+            const project = projects[projectId];
+            
+            // Get the project detail container
+            const projectDetailContainer = document.getElementById('projectDetail');
+            
+            if (project) {
+                // Set page title
+                document.title = `${project.title} | Sahal Salim Portfolio`;
+                
+                // Create project detail HTML
+                let progressColorClass = '';
+                if (project.progress >= 80) {
+                    progressColorClass = 'green';
+                } else if (project.progress >= 50) {
+                    progressColorClass = 'blue';
+                } else if (project.progress >= 25) {
+                    progressColorClass = 'purple';
+                } else {
+                    progressColorClass = 'yellow';
+                }
+                
+                let projectHtml = `
+                    <div class="project-detail-header">
+                        <img src="${project.image}" alt="${project.title}">
+                        <div class="project-header-content">
+                            <h1>${project.title}</h1>
+                            <div class="project-meta">
+                                <span class="badge ${project.category.toLowerCase()}">${project.category}</span>
+                                <span class="tag" style="background-color: white; color: var(--dark-color);">Last updated: ${project.date}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Project Overview</h2>
+                        <div class="feature-list">
+                            <p>${project.detailDescription || project.description}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Technologies Used</h2>
+                        <div class="feature-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Key Features</h2>
+                        <div class="feature-list">
+                            ${project.features.map(feature => `
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>${feature}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Project Status</h2>
+                        <div class="feature-list">
+                            <p>Current completion: <strong>${project.progress}%</strong></p>
+                            <div class="skill-progress" style="margin-top: 1rem;">
+                                <div class="progress-bar">
+                                    <div class="progress-fill ${progressColorClass}" style="width: ${project.progress}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Project Links</h2>
+                        <div class="feature-list" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                            ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" class="btn primary-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+                            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="btn secondary-btn"><i class="fab fa-github"></i> GitHub Repository</a>` : ''}
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>More Projects</h2>
+                        <div class="related-projects">
+                `;
+                
+                // Add related projects
+                for (const relatedId in projects) {
+                    if (relatedId !== projectId) {
+                        const relatedProject = projects[relatedId];
+                        projectHtml += `
+                            <a href="project-details.html?id=${relatedProject.id}" class="project-card" style="text-decoration: none; color: inherit;">
+                                <div class="project-img">
+                                    <img src="${relatedProject.image}" alt="${relatedProject.title}">
+                                    <div class="project-overlay">
+                                        <h3>${relatedProject.title}</h3>
+                                        <span class="project-date">${relatedProject.date}</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-category">
+                                        <span class="badge ${relatedProject.category.toLowerCase()}">${relatedProject.category}</span>
+                                    </div>
+                                    <p>${relatedProject.description}</p>
+                                </div>
+                            </a>
+                        `;
+                    }
+                }
+                
+                projectHtml += `
+                        </div>
+                    </div>
+                `;
+                
+                // Update the container
+                projectDetailContainer.innerHTML = projectHtml;
+            } else {
+                // Project not found
+                projectDetailContainer.innerHTML = `
+                    <div style="text-align: center; padding: 3rem 0;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--warning-color);"></i>
+                        <h2 style="margin: 1rem 0;">Project Not Found</h2>
+                        <p>The project you're looking for doesn't exist or has been removed.</p>
+                        <a href="index.html#projects" class="btn primary-btn" style="margin-top: 1.5rem;">
+                            <i class="fas fa-arrow-left"></i> Back to All Projects
+                        </a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
